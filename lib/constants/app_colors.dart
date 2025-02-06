@@ -14,4 +14,5 @@ class AppColors {
   //! Blacks
   static const Color black = Color(0xFF000000);
   static const Color secondaryBlack = Color(0xFF060620);
+  // static const Color thirdBlack = Color(0xFF0A0B39);
 }
