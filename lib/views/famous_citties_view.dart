@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_tutorial/models/famous_cities.dart';
+import 'package:weather_tutorial/screens/weather_detail_screen.dart';
 import 'package:weather_tutorial/widgets/famous_cities_tile.dart';
 
 class FamousCittiesView extends StatelessWidget {
@@ -14,9 +15,16 @@ class FamousCittiesView extends StatelessWidget {
         shrinkWrap: true,
         itemBuilder: (context, index) {
           final city = famousCities[index];
-          return FamousCitiesTile(
-            city: city.name,
-            index: index,
+          return InkWell(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                return WeatherDetailScreen(cityName: city.name);
+              }));
+            },
+            child: FamousCitiesTile(
+              city: city.name,
+              index: index,
+            ),
           );
         });
   }

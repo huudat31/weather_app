@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_tutorial/constants/app_colors.dart';
+import 'package:weather_tutorial/screens/forecast_screen.dart';
 import 'package:weather_tutorial/screens/search_screen.dart';
 import 'package:weather_tutorial/screens/weather_screen.dart';
 
@@ -34,12 +35,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final screens = const [
     WeatherScreen(),
     SearchScreen(),
-    Center(
-      child: Text("Weather"),
-    ),
-    Center(
-      child: Text("Settings"),
-    ),
+    ForecastScreen(),
+    Text("Settings"),
   ];
   @override
   Widget build(BuildContext context) {
